@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corretaje Moderno</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fondo animado -->
+  <div class="animated-background"></div>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="container header">
+      <div class="logo">
+        <img src="https://via.placeholder.com/80" alt="Logo" id="logo">
+        <h1 id="business-name">Corretaje Moderno</h1>
+      </div>
+      <button id="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#properties">Propiedades</a></li>
+          <li><a href="#filters">Filtros</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección principal -->
+  <section id="home" class="home">
+    <div class="hero">
+      <h2>Encuentra tu Espacio Ideal</h2>
+      <p>Propiedades seleccionadas para ti. ¡Explora ahora!</p>
+      <a href="#properties" class="cta-button">Ver Propiedades</a>
+    </div>
+  </section>
+
+  <!-- Filtros distribuidos -->
+  <section id="filters" class="filters">
+    <h2>Filtra tus Opciones</h2>
+    <div class="filters-container">
+      <div class="filter-card">
+        <label for="type">Tipo</label>
+        <select name="type" id="type">
+          <option value="all">Todos</option>
+          <option value="house">Casa</option>
+          <option value="apartment">Departamento</option>
+        </select>
+      </div>
+      <div class="filter-card">
+        <label for="price">Precio Máximo</label>
+        <input type="number" name="price" id="price" placeholder="Ej: 100000">
+      </div>
+      <div class="filter-card">
+        <label for="rooms">Habitaciones</label>
+        <input type="number" name="rooms" id="rooms" placeholder="Ej: 3">
+      </div>
+      <div class="filter-card">
+        <label for="bathrooms">Baños</label>
+        <input type="number" name="bathrooms" id="bathrooms" placeholder="Ej: 2">
+      </div>
+      <button type="submit" class="search-button">Buscar</button>
+    </div>
+  </section>
+
+  <!-- Propiedades destacadas -->
+  <section id="properties" class="properties">
+    <h2>Propiedades Destacadas</h2>
+    <div class="property-list">
+      <div class="property">
+        <img src="https://via.placeholder.com/300x200?text=Casa+Moderna" alt="Casa moderna">
+        <h3>Casa Moderna</h3>
+        <p>💲 120,000 USD</p>
+        <p>📍 Ciudad Principal</p>
+      </div>
+      <div class="property">
+        <img src="https://via.placeholder.com/300x200?text=Departamento" alt="Departamento céntrico">
+        <h3>Departamento Céntrico</h3>
+        <p>💲 85,000 USD</p>
+        <p>📍 Centro Histórico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contact" class="contact">
+    <h2>Contáctanos</h2>
+    <form id="contactForm">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" placeholder="Tu nombre" required>
+      <label for="email">Correo Electrónico</label>
+      <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+      <label for="message">Mensaje</label>
+      <textarea id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Corretaje Moderno. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
